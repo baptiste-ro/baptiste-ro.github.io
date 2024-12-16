@@ -1,0 +1,18 @@
+# build output
+
+# generated types
+
+
+# dependencies
+
+
+# logs
+
+
+# environment variables
+
+
+# macOS-specific files
+.gitignore
+.vscode
+.idea
