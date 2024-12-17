@@ -1,7 +1,7 @@
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, s as spreadAttributes, a as addAttribute, b as renderComponent, d as createAstro, u as unescapeHTML, F as Fragment, i as renderHead, e as renderSlot } from './astro/server_Deeqg--D.mjs';
 import 'kleur/colors';
 import '@astrojs/internal-helpers/path';
-import { $ as $$Image } from './_astro_assets_CjVB3AqC.mjs';
+import { $ as $$Image } from './_astro_assets_CVYUXSGw.mjs';
 import { getIconData, iconToSVG } from '@iconify/utils';
 /* empty css                           */
 
@@ -67,7 +67,7 @@ const $$Icon = createComponent(($$result, $$props, $$slots) => {
     delete normalizedProps.viewBox;
   }
   return renderTemplate`${maybeRenderHead()}<svg${spreadAttributes(normalizedProps)}${addAttribute(name, "data-icon")}> ${title && renderTemplate`<title>${title}</title>`} ${desc && renderTemplate`<desc>${desc}</desc>`} ${inline ? renderTemplate`${renderComponent($$result, "Fragment", Fragment, { "id": id }, { "default": ($$result2) => renderTemplate`${unescapeHTML(normalizedBody)}` })}` : renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": ($$result2) => renderTemplate`${includeSymbol && renderTemplate`<symbol${addAttribute(id, "id")}${addAttribute(viewBox, "viewBox")}>${unescapeHTML(normalizedBody)}</symbol>`}<use${addAttribute(`#${id}`, "href")}></use> ` })}`} </svg>`;
-}, "/mnt/c/Users/Utilisateur/Desktop/Cours/BUT2/Communication/astro-minimal-portfolio-template-main/node_modules/astro-icon/components/Icon.astro", void 0);
+}, "/home/infoetu/baptiste.royer.etu/BUT2/Semestre 1/Communication/site/node_modules/astro-icon/components/Icon.astro", void 0);
 
 const identity = {
   name: "Royer Baptiste",
@@ -283,6 +283,6 @@ const $$Layout = createComponent(($$result, $$props, $$slots) => {
   Astro2.self = $$Layout;
   const { seo } = Astro2.props;
   return renderTemplate` <html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator"${addAttribute(Astro2.generator, "content")}><title>${seo.title}</title><meta name="description"${addAttribute(seo.description, "content")}><meta property="og:title"${addAttribute(seo.title, "content")}><meta property="og:description"${addAttribute(seo.description, "content")}><meta property="og:image"${addAttribute(seo.image, "content")}>${renderHead()}</head> <body> <header> <div class="px-6 py-6 max-w-2xl mx-auto flex items-center justify-between"> <a href="/"> ${renderComponent($$result, "Image", $$Image, { "src": identity.logo, "alt": "Logo", "width": 50, "height": 100, "class": "w-[50px] h-[50px] object-cover" })} </a> <nav class="ml-auto mr-6 sm:m-0"> <ul class="hidden sm:flex sm:items-center sm:gap-2"> ${navBarLinks.map((link) => renderTemplate`<li> <a class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"${addAttribute(link.url, "href")}${addAttribute(link.external ? "_blank" : "_self", "target")}> ${link.title} </a> </li>`)} </ul> <div class="relative sm:hidden"> <button id="link-menu-button" class="relative font-medium opacity-60 p-4">Menu <span id="open-indicator">+</span></button> <div id="link-menu" class="absolute p-2 right-0 bg-gray-bg rounded-lg w-44 transition-opacity ease-in-out duration-300 opacity-0 z-40"> <ul> ${navBarLinks.map((link) => renderTemplate`<li> <a class="block pl-4 py-3"${addAttribute(link.url, "href")}${addAttribute(link.external ? "_blank" : "_self", "target")}> ${link.title} </a> </li>`)} </ul> </div> </div> </nav> <div> <a${addAttribute(`mailto:${identity.email}`, "href")} class="block p-2 opacity-60 hover:opacity-100 transition-opacity" aria-label="Email"> ${renderComponent($$result, "Icon", $$Icon, { "name": "mdi:email", "width": 20, "height": 20 })} </a> </div> </div> </header> <main class="mb-32"> ${renderSlot($$result, $$slots["default"])} </main> <footer></footer> </body></html>`;
-}, "/mnt/c/Users/Utilisateur/Desktop/Cours/BUT2/Communication/astro-minimal-portfolio-template-main/src/layouts/Layout.astro", void 0);
+}, "/home/infoetu/baptiste.royer.etu/BUT2/Semestre 1/Communication/site/src/layouts/Layout.astro", void 0);
 
 export { $$Layout as $, aboutPageContent as a, projectsPageContent as b, $$Icon as c, homePageContent as h, identity as i, parcoursPageContent as p };

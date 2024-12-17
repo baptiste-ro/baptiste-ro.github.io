@@ -358,7 +358,7 @@ function isPropagatedAssetsModule(module) {
 
 const contentDir = '/src/content/';
 
-const contentEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/posts/Classification.md": () => import('./Classification_qBVk6C-S.mjs'),"/src/content/posts/Knn.md": () => import('./Knn_BfqTTUvY.mjs'),"/src/content/posts/Quizemon.md": () => import('./Quizemon_Cw0uZOI8.mjs'),"/src/content/posts/VM.md": () => import('./VM_flbMvIQZ.mjs')});
+const contentEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/posts/Classification.md": () => import('./Classification_O-mDSmAV.mjs'),"/src/content/posts/Knn.md": () => import('./Knn_Zb2kTTLW.mjs'),"/src/content/posts/Quizemon.md": () => import('./Quizemon_ClVXSMWD.mjs'),"/src/content/posts/VM.md": () => import('./VM_ZROsO7at.mjs')});
 const contentCollectionToEntryMap = createCollectionToGlobResultMap({
 	globResult: contentEntryGlob,
 	contentDir,
@@ -375,7 +375,7 @@ const collectionToEntryMap = createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"posts":{"type":"content","entries":{"classification":"/src/content/posts/Classification.md","vm":"/src/content/posts/VM.md","quizemon":"/src/content/posts/Quizemon.md","knn":"/src/content/posts/Knn.md"}}};
+lookupMap = {"posts":{"type":"content","entries":{"knn":"/src/content/posts/Knn.md","quizemon":"/src/content/posts/Quizemon.md","classification":"/src/content/posts/Classification.md","vm":"/src/content/posts/VM.md"}}};
 
 const collectionNames = new Set(Object.keys(lookupMap));
 
@@ -388,7 +388,7 @@ function createGlobLookup(glob) {
 	};
 }
 
-const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/posts/Classification.md": () => import('./Classification_BkRTWzty.mjs'),"/src/content/posts/Knn.md": () => import('./Knn_CSJT07Hg.mjs'),"/src/content/posts/Quizemon.md": () => import('./Quizemon_BUfuL29v.mjs'),"/src/content/posts/VM.md": () => import('./VM_DQfVHKDh.mjs')});
+const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/posts/Classification.md": () => import('./Classification_BJTzlwFC.mjs'),"/src/content/posts/Knn.md": () => import('./Knn_CUyFBr3x.mjs'),"/src/content/posts/Quizemon.md": () => import('./Quizemon_DvhX916L.mjs'),"/src/content/posts/VM.md": () => import('./VM_BfWcNQW2.mjs')});
 const collectionToRenderEntryMap = createCollectionToGlobResultMap({
 	globResult: renderEntryGlob,
 	contentDir,

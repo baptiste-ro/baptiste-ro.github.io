@@ -1,6 +1,6 @@
 import { renderers } from './renderers.mjs';
 import { c as createExports, s as serverEntrypointModule } from './chunks/_@astrojs-ssr-adapter_DqHiYQv3.mjs';
-import { manifest } from './manifest_usfu6ntF.mjs';
+import { manifest } from './manifest_CUw5ApWb.mjs';
 
 const _page0 = () => import('./pages/_image.astro.mjs');
 const _page1 = () => import('./pages/contact.astro.mjs');
@@ -26,8 +26,8 @@ const _manifest = Object.assign(manifest, {
 });
 const _args = {
     "mode": "standalone",
-    "client": "file:///mnt/c/Users/Utilisateur/Desktop/Cours/BUT2/Communication/astro-minimal-portfolio-template-main/dist/client/",
-    "server": "file:///mnt/c/Users/Utilisateur/Desktop/Cours/BUT2/Communication/astro-minimal-portfolio-template-main/dist/server/",
+    "client": "file:///home/infoetu/baptiste.royer.etu/BUT2/Semestre%201/Communication/site/dist/client/",
+    "server": "file:///home/infoetu/baptiste.royer.etu/BUT2/Semestre%201/Communication/site/dist/server/",
     "host": true,
     "port": 4321,
     "assets": "_astro"

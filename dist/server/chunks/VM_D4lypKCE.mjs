@@ -4,8 +4,8 @@ import 'clsx';
 
 const html = "";
 
-				const frontmatter = {"title":"Quizemon","pubDate":"2024-01-19T00:00:00.000Z","description":"Jeu de duel au tour par tour sur des sujets scholaires","author":"Baptiste Royer","image":{"url":"/photo.jpg","alt":"Test"},"url":"https://github/baptiste_ro/Quizemon","minutesRead":"0 min read"};
-				const file = "/mnt/c/Users/Utilisateur/Desktop/Cours/BUT2/Communication/astro-minimal-portfolio-template-main/src/content/posts/Quizemon.md";
+				const frontmatter = {"title":"Installation d'une Machine Virtuelle","pubDate":"2024-06-19T00:00:00.000Z","description":"Projet visant à aider à l'installation d'une machine virtuelle sur un environnement Linux.","author":"Baptiste Royer","image":{"url":"/VM.png","alt":"VM"},"url":"https://gitlab.univ-lille.fr/baptiste.royer.etu/rapport-sae-reseau","minutesRead":"0 min read"};
+				const file = "/home/infoetu/baptiste.royer.etu/BUT2/Semestre 1/Communication/site/src/content/posts/VM.md";
 				const url = undefined;
 				function rawContent() {
 					return "";

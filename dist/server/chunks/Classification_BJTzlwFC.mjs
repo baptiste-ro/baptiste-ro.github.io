@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./VM_DxxJXdXg.mjs');
+						return import('./Classification_BtgOicMJ.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];
