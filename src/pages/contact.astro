@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import { aboutPageContent } from "../config";
+import Item from "../components/ResumeItem.astro";
+import { Markdown } from "@astropub/md";
+import SocialLinkBox from "../components/SocialLinkBox.astro";
+---
+
+<Layout seo={aboutPageContent.seo}>
+  <section class="mt-10 max-w-2xl mx-auto px-6">
+    <h1 class="font-bold text-3xl mb-1">Contact</h1>
+  </section>
+  <section class="my-20 mt-32 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
+    <div>
+      <div class="mb-6">
+        <Markdown of={aboutPageContent.work.description} />
+      </div>
+      <div class="grid grid-cols-1 group">
+        {aboutPageContent.work.items.map((item) => <Item {...item} />)}
+      </div>
+    </div>
+  </section>
+</Layout>

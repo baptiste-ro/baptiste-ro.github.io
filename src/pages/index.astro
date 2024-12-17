@@ -1,0 +1,87 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import { homePageContent, identity } from "../config";
+import SocialLink from "../components/SocialLink.astro";
+import Link from "../components/Link.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("posts");
+posts.sort((a: { data: { pubDate: string | number | Date; }; }, b: { data: { pubDate: string | number | Date; }; }) => {
+  const dateA = new Date(a.data.pubDate).getTime();
+  const dateB = new Date(b.data.pubDate).getTime();
+  return dateB - dateA;
+});
+posts.splice(2)
+---
+
+<Layout seo={homePageContent.seo}>
+  <section class="mt-10 max-w-2xl mx-auto px-6">
+    <h1 class="font-bold text-3xl mb-1">{identity.name}</h1>
+    <p class="opacity-60 mb-10">{homePageContent.role}</p>
+    <div class="flex flex-col min-[520px]:flex-row gap-6 mb-8">
+      <Image
+        src={identity.logo}
+        alt={identity.name}
+        width={100}
+        height={100}
+        class="rounded-full"
+      />
+      <div class="group flex flex-col justify-center gap-2 w-fit">
+        {
+          homePageContent.socialLinks.map((link) => (
+            <SocialLink
+              title={link.title}
+              url={link.url}
+              icon={link.icon}
+              external={link.external}
+            />
+          ))
+        }
+      </div>
+    </div>
+    <p class="max-w-md mb-8">
+      {homePageContent.description}
+    </p>
+    <div class="flex items-center gap-4 group w-fit">
+      {
+        homePageContent.links.map((link) => (
+          <Link text={link.title} href={link.url} external={link.external} />
+        ))
+      }
+    </div>
+  </section>
+  <br>
+  <br>
+  <section class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">
+    <p>&bull; Etant étudiant en 2e année de BUT d'Informatique, avec une spécialisation en réalisation d'applications, je suis à la recherche d'une alternance en développement pour ma troisième année. C'est avec enthousiasme que je souhaite faire croître mon expérience dans le domaine professionnel, au sein d'une entreprise à laquelle je souhaiterais également être utile.</p>
+    <p>&bull; Tout au long de mon parcours académique et personnel, j’ai développé de solides compétences en informatique, qui me permettent de m’adapter rapidement à de nouveaux défis, qu’il s’agisse de maîtriser de nouveaux langages, ou d’expérimenter des méthodes de travail innovantes. Durant ma formation, j’ai également eu l’opportunité de cultiver des qualités essentielles telles que le travail en équipe, la communication, la patience, la rigueur et l’empathie, notamment grâce à de nombreux projets collaboratifs. L’apprentissage de la méthode agile dans le cadre du développement d’un jeu au sein de mon BUT Informatique m’a permis de me préparer à intégrer et contribuer efficacement à une équipe en entreprise.</p>
+    <p>&bull; Dans la continuité de mon choix de spécialisation en BUT, je souhaite effectuer mon alternance dans une entreprise spécialisée en développement informatique, conception logicielle et maintenance applicative, plutôt que dans le domaine des réseaux. Je suis également curieuse de découvrir de nouveaux domaines et prête à explorer des champs encore inexplorés dans ma formation.</p>
+  </section>
+  <section class="mt-20 max-w-2xl mx-auto px-6">
+    <h2 class="mb-8">Derniers Projets</h2>
+    <div class="text-center">
+      {
+        posts.map((post: { slug: any; data: { pubDate: { toLocaleDateString: () => unknown; }; title: unknown; description: unknown; }; }) => (
+          <a
+            href={`/projets/${post.slug}`}
+            class=" sm:flex sm:flex-row sm:justify-between sm:gap-6 post"
+          >
+            <div class="mt-4 sm:my-auto">
+              <p class="opacity-60 mb-2">
+                {post.data.pubDate.toLocaleDateString()}
+              </p>
+              <h3 class="font-medium hover-underline">{post.data.title}</h3>
+              <p class="text-sm opacity-60 mt-2 mb-3">{post.data.description}</p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+    <a
+        href="/projets"
+        class="underline underline-offset-4 opacity-60 hover:opacity-100 transition-opacity"
+        >Tout voir</a
+      >
+  </section>
+</Layout>
